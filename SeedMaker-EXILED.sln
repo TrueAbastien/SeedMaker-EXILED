@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeedMaker", "SeedMaker\SeedMaker.csproj", "{75CF4AC9-DD91-42DB-A6E6-68655AE41C44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75CF4AC9-DD91-42DB-A6E6-68655AE41C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CF4AC9-DD91-42DB-A6E6-68655AE41C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CF4AC9-DD91-42DB-A6E6-68655AE41C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CF4AC9-DD91-42DB-A6E6-68655AE41C44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9235BB4-CE82-4DD7-88A9-BFACDAF8DEAE}
+	EndGlobalSection
+EndGlobal
