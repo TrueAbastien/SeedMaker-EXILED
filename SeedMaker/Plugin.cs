@@ -8,15 +8,26 @@ namespace SeedMaker
     {
         public override string Name { get; } = "SeedMaker";
         public override string Author { get; } = "Abastien";
-        public override PluginPriority Priority { get; } = PluginPriority.Lowest;
+
+        private HarmonyLib.Harmony instance;
+        private static int counter;
 
         public override void OnEnabled()
         {
-            if (!Config.IsEnabled)
+            if (Config.IsEnabled)
+            {
+                instance = new HarmonyLib.Harmony($"abastien.seedmaker.{++counter}");
+                instance.PatchAll();
+            }
+            else
             {
                 Data.isRandom = true;
                 Data.currentSeed = -1;
             }
+        }
+        public override void OnDisabled()
+        {
+            instance?.UnpatchAll();
         }
     }
 }

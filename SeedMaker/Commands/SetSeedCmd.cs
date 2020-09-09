@@ -21,16 +21,20 @@ namespace SeedMaker.Commands
             {
                 if (int.TryParse(arguments.ElementAt(0), out int value))
                 {
-                    Data.currentSeed = value;
-                    response = $"Seed was set to {value} successfully !";
-
-                    if (Data.isRandom)
+                    if (Methods.CheckSeedValidity(value))
                     {
-                        Data.isRandom = false;
-                        response += "\n[INFO] Seed was locked on set.";
-                    }
+                        Data.currentSeed = value;
+                        response = $"Seed was set to {value} successfully !";
 
-                    return true;
+                        if (Data.isRandom)
+                        {
+                            Data.isRandom = false;
+                            response += "\n[INFO] Seed was locked on set.";
+                        }
+
+                        return true;
+                    }
+                    else response = "Seed shouldn't be 10 digits long (or more) nor equal to -1...";
                 }
                 else response = "Seed couldn't be parsed, try sending a valid Integer...";
             }
