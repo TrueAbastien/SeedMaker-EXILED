@@ -21,8 +21,8 @@ namespace SeedMaker
             }
             else
             {
-                Data.isRandom = true;
-                Data.currentSeed = -1;
+                Data.isRandom.Reset();
+                Data.currentSeed.Reset();
             }
         }
         public override void OnDisabled()

@@ -16,9 +16,9 @@ namespace SeedMaker.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            if (!Data.isRandom)
+            if (!Data.isRandom.value)
             {
-                Data.isRandom = true;
+                Data.isRandom.value = true;
                 response = "Seed freed successfully !";
                 return true;
             }

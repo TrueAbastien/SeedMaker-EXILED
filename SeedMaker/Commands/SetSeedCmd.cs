@@ -23,12 +23,12 @@ namespace SeedMaker.Commands
                 {
                     if (Methods.CheckSeedValidity(value))
                     {
-                        Data.currentSeed = value;
+                        Data.currentSeed.value = value;
                         response = $"Seed was set to {value} successfully !";
 
-                        if (Data.isRandom)
+                        if (Data.isRandom.value)
                         {
-                            Data.isRandom = false;
+                            Data.isRandom.value = false;
                             response += "\n[INFO] Seed was locked on set.";
                         }
 

@@ -16,9 +16,9 @@ namespace SeedMaker.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            if (Data.isRandom)
+            if (Data.isRandom.value)
             {
-                Data.isRandom = false;
+                Data.isRandom.value = false;
                 response = "Seed locked successfully !";
                 return true;
             }

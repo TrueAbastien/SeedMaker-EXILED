@@ -28,21 +28,21 @@ namespace SeedMaker.Patches
 						};
 					}
 
-					if (Data.isRandom)
+					if (Data.isRandom.value)
                     {
 						__instance.Networkseed = ConfigFile.ServerConfig.GetInt("map_seed", -1);
 					}
 					else
                     {
-						__instance.Networkseed = Data.currentSeed;
+						__instance.Networkseed = Data.currentSeed.value;
                     }
 
 					while (NetworkServer.active && __instance.seed == -1)
 					{
 						__instance.Networkseed = UnityEngine.Random.Range(-999999999, 999999999);
-						Data.isRandom = true;
+						Data.isRandom.value = true;
 					}
-					Data.currentSeed = __instance.Networkseed;
+					Data.currentSeed.value = __instance.Networkseed;
 				}
 
 				return false;

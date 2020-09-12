@@ -16,9 +16,9 @@ namespace SeedMaker.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            response = Data.isRandom ?
-                $"Seed is currently randomized to {Data.currentSeed}." :
-                $"Seed has been locked to {Data.currentSeed}.";
+            response = Data.isRandom.value ?
+                $"Seed is currently randomized to {Data.currentSeed.value}." :
+                $"Seed has been locked to {Data.currentSeed.value}.";
             return true;
         }
     }
